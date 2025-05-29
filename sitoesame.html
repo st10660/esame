@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sito Esame di Stato - Cristian Pranzo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0A1F44;
+      color: white;
+      margin: 0;
+      padding-top: 70px; /* spazio per la navbar */
+    }
+
+    .navbar {
+      background-color: #003366;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      background: #162447;
+      padding: 4rem 1rem;
+      animation: fadeIn 1s ease-in;
+    }
+
+    .hero-text {
+      max-width: 600px;
+      margin: 1rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero button {
+      background-color: #FFD700;
+      color: black;
+      font-weight: bold;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .hero button:hover {
+      background-color: #FFC300;
+    }
+
+    .hero img {
+      max-width: 300px;
+      margin: 1rem;
+    }
+
+    .section-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 3rem 1rem;
+    }
+
+    .section-box {
+      background: #004080;
+      border-radius: 15px;
+      padding: 2rem;
+      width: 260px;
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s, background 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-box:hover {
+      transform: translateY(-5px);
+      background: #0056b3;
+    }
+
+    .section-box i {
+      font-size: 2rem;
+      color: #FFD700;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .footer-info {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .section-box {
+        width: 90%;
+      }
+    }
+
+    /* For the layout */
+    .row-centered {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .row-centered > .col {
+      flex: 1 1 calc(33.333% - 30px); /* 3 columns on the first row */
+    }
+
+    .row-centered-2 > .col {
+      flex: 1 1 calc(50% - 30px); /* 2 columns on the second row */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar fissa -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Cristian Pranzo</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="hero-text">
+      <h1>Benvenuto nel mio spazio personale!</h1>
+      <p>Scopri i miei progetti, gli approfondimenti scolastici e le attività svolte durante il mio percorso di studi.</p>
+      <button onclick="window.location.href='area-personale.html'">ESPLORA ORA</button>
+    </div>
+    <img src="img/image1.png" alt="immagine studente">
+  </div>
+
+  <!-- Sezioni -->
+  <div class="container section-container">
+    <div class="row row-centered">
+      <div class="col">
+        <div class="section-box" onclick="window.location.href='area-personale.html'">
+          <i class="bi bi-person-circle"></i>
+          Area Personale
+        </div>
+      </div>
+      <div class="col">
+        <div class="section-box" onclick="window.location.href='pcto.html'">
+          <i class="bi bi-briefcase"></i>
+          PCTO
+        </div>
+      </div>
+      <div class="col">
+        <div class="section-box" onclick="window.location.href='area-umanistica.html'">
+          <i class="bi bi-book"></i>
+          Area Umanistica
+        </div>
+      </div>
+    </div>
+    <div class="row row-centered-2">
+      <div class="col">
+        <div class="section-box" onclick="window.location.href='area-professionale.html'">
+          <i class="bi bi-laptop"></i>
+          Area Professionale
+        </div>
+      </div>
+      <div class="col">
+        <div class="section-box" onclick="window.location.href='area-educazione-civica.html'">
+          <i class="bi bi-globe-europe-africa"></i>
+          Educazione Civica
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 - Sito Esame di Stato | Realizzato da Cristian Pranzo</p>
+    <div class="footer-info">
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
