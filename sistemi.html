@@ -37,9 +37,39 @@
     .project {
       background-color: white;
       padding: 20px;
-      margin-bottom: 20px;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .carousel {
+      position: relative;
+      text-align: center;
+    }
+
+    .carousel img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      margin: 10px 0;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .buttons {
+      margin-top: 10px;
+    }
+
+    .buttons button {
+      padding: 8px 16px;
+      margin: 0 5px;
+      background-color: #004080;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
     }
 
     footer {
@@ -61,18 +91,55 @@
 
   <div class="project">
     <h3>Simulazioni con Cisco Packet Tracer</h3>
-    <p>Progetti di configurazione di reti LAN/WAN, VLAN, ACL, routing dinamico e statico, realizzati in ambiente simulato con Cisco Packet Tracer.</p>
-  </div>
-
-  <div class="project">
-    <h3>Server DHCP e DNS</h3>
-    <p>Installazione e configurazione di servizi di rete come DHCP e DNS su sistemi Linux per la gestione dinamica degli indirizzi IP.</p>
+    <div class="carousel">
+      <img id="carousel-image" src="rete1.png" alt="Simulazione rete 1">
+      <div class="description" id="carousel-description">
+        Configurazione di una rete LAN con VLAN multiple, switch layer 2 e routing inter-VLAN.
+      </div>
+      <div class="buttons">
+        <button onclick="prevSlide()">Precedente</button>
+        <button onclick="nextSlide()">Successiva</button>
+      </div>
+    </div>
   </div>
 </main>
 
 <footer>
   <p>&copy; 2025 Il mio sito personale - Tutti i diritti riservati</p>
 </footer>
+
+<script>
+  const images = [
+    'rete1.png',
+    'rete2.png',
+    'rete3.png',
+    'rete4.png'
+  ];
+
+  const descriptions = [
+    'Configurazione di una rete LAN con VLAN multiple, switch layer 2 e routing inter-VLAN.',
+    'Rete WAN simulata con protocollo RIP e router multipli interconnessi.',
+    'Implementazione di ACL per controllare l’accesso tra diverse subnet.',
+    'Configurazione completa con server DHCP, DNS, e routing statico tra tre sedi remote.'
+  ];
+
+  let currentIndex = 0;
+
+  function updateCarousel() {
+    document.getElementById('carousel-image').src = images[currentIndex];
+    document.getElementById('carousel-description').textContent = descriptions[currentIndex];
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updateCarousel();
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateCarousel();
+  }
+</script>
 
 </body>
 </html>
