@@ -42,11 +42,24 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
 
+    .project video {
+      width: 100%;
+      max-width: 100%;
+      margin-top: 10px;
+      border-radius: 8px;
+    }
+
     footer {
       background-color: #004080;
       color: white;
       text-align: center;
       padding: 20px;
+    }
+
+    a {
+      color: #004080;
+      text-decoration: none;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -60,14 +73,29 @@
   <h2>I miei lavori in Informatica</h2>
 
   <div class="project">
-    <h3>Gestionale Presenze</h3>
-    <p>Software sviluppato in C# con MySQL per la gestione delle presenze dei dipendenti. Il progetto permette la registrazione di ingressi, uscite, gestione ferie, permessi e calcolo automatico delle ore lavorate. Include una dashboard per l’amministratore e un’interfaccia per i dipendenti. Progetto realizzato durante lo stage presso Menerva.</p>
+    <h3>Help Desk</h3>
+    <p>Progetto di gestione ticket per l'assistenza tecnica, sviluppato con PHP e MySQL. Il sito consente agli utenti di registrare richieste di supporto e agli operatori di gestirle in modo strutturato.</p>
+    <p><a href="https://helpdesk.sviluppo.host/login.php" target="_blank">Vai al sito Help Desk</a></p>
   </div>
 
   <div class="project">
-    <h3>Applicazione Web in PHP</h3>
-    <p>Realizzazione di un sito web completo con funzionalità di login, registrazione, gestione dati con MySQL e personalizzazione tramite cookie. L’applicazione implementa un sistema di autenticazione tradizionale con metodi GET e POST.</p>
+    <h3>Corsa dei Cavalli</h3>
+    <p>Software realizzato in C# che simula una corsa di cavalli. L’utente può scommettere sul cavallo vincente. Il progetto include una logica casuale per la corsa e un'interfaccia grafica coinvolgente.</p>
+    <video controls>
+      <source src="Progetto_cavalli_vid.mp4" type="video/mp4">
+      Il tuo browser non supporta la riproduzione del video.
+    </video>
   </div>
+
+  <div class="project">
+    <h3>Drop the Game</h3>
+    <p>Videogioco sviluppato con Visual Studio in cui il personaggio deve raccogliere oggetti che cadono dal cielo. Il gioco include una logica di punteggio e un'interfaccia intuitiva.</p>
+    <video controls>
+      <source src="Video gioco dell'anno giusto.mp4" type="video/mp4">
+      Il tuo browser non supporta la riproduzione del video.
+    </video>
+  </div>
+
 </main>
 
 <footer>
