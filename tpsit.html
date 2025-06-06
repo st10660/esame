@@ -22,6 +22,12 @@
       padding: 20px;
     }
 
+    header img {
+      max-width: 100%;
+      height: auto;
+      border-bottom: 4px solid #003060;
+    }
+
     main {
       flex: 1;
       padding: 30px;
@@ -32,14 +38,21 @@
     h2 {
       color: #004080;
       margin-bottom: 20px;
+      font-size: 28px;
     }
 
     .project {
       background-color: white;
-      padding: 20px;
-      margin-bottom: 20px;
+      padding: 25px;
+      margin-bottom: 30px;
+      border-left: 6px solid #004080;
       border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .project h3 {
+      margin-top: 0;
+      font-size: 22px;
     }
 
     .project a {
@@ -52,11 +65,17 @@
       text-decoration: underline;
     }
 
+    .icon {
+      font-size: 24px;
+      margin-right: 8px;
+    }
+
     footer {
       background-color: #004080;
       color: white;
       text-align: center;
       padding: 20px;
+      font-size: 14px;
     }
   </style>
 </head>
@@ -64,15 +83,17 @@
 
 <header>
   <h1>Progetti TPSIT</h1>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg" alt="Logo Android">
 </header>
 
 <main>
-  <h2>I miei lavori in TPSIT</h2>
+  <h2>📱 I miei lavori in TPSIT</h2>
 
   <div class="project">
-    <h3>Cosa è Android?</h3>
-    <p>In questa presentazione ho approfondito cos'è Android, il suo funzionamento, la sua architettura e il ruolo che ha nel panorama dei sistemi operativi mobili. Ho illustrato le sue caratteristiche principali, le versioni, e l’ambiente di sviluppo. È una risorsa utile per comprendere come Android venga utilizzato e sviluppato nel contesto informatico moderno.</p>
-    <p><a href="https://prezi.com/p/edit/vmcezolf9u5u/?lid=x1kxl8roj2s0&utm_source=braze&utm_medium=email&utm_content=Tokenization+Variant&utm_campaign=Next_Share_A_Prezi_v2&UID=341764055" target="_blank">Guarda la presentazione su Prezi</a></p>
+    <h3><span class="icon">📄</span>Cos’è Android?</h3>
+    <p>In questa presentazione ho approfondito <strong>cos'è Android</strong>, il suo funzionamento, la sua architettura e il ruolo che ha nel panorama dei sistemi operativi mobili. Ho illustrato le sue <strong>caratteristiche principali</strong>, le versioni più importanti e l’ambiente di sviluppo.</p>
+    <p>È una risorsa utile per comprendere come Android venga utilizzato e sviluppato nel contesto informatico moderno.</p>
+    <p><a href="https://prezi.com/p/edit/vmcezolf9u5u/?lid=x1kxl8roj2s0&utm_source=braze&utm_medium=email&utm_content=Tokenization+Variant&utm_campaign=Next_Share_A_Prezi_v2&UID=341764055" target="_blank">🎥 Guarda la presentazione su Prezi</a></p>
   </div>
 </main>
 
