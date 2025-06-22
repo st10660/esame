@@ -92,9 +92,9 @@
   <div class="project">
     <h3>Simulazioni con Cisco Packet Tracer</h3>
     <div class="carousel">
-      <img id="carousel-image" src="rete1.png" alt="Simulazione rete 1">
+      <img id="carousel-image" src="access.png" alt="Simulazione rete 1">
       <div class="description" id="carousel-description">
-        Configurazione di una rete LAN con VLAN multiple, switch layer 2 e routing inter-VLAN.
+        Rete configurata con Access List per controllare il traffico in entrata e in uscita tra subnet.
       </div>
       <div class="buttons">
         <button onclick="prevSlide()">Precedente</button>
@@ -110,17 +110,15 @@
 
 <script>
   const images = [
-    'rete1.png',
-    'rete2.png',
-    'rete3.png',
-    'rete4.png'
+    'access.png',
+    'vlan.png',
+    'vlan-nat-pat.png'
   ];
 
   const descriptions = [
-    'Configurazione di una rete LAN con VLAN multiple, switch layer 2 e routing inter-VLAN.',
-    'Rete WAN simulata con protocollo RIP e router multipli interconnessi.',
-    'Implementazione di ACL per controllare l’accesso tra diverse subnet.',
-    'Configurazione completa con server DHCP, DNS, e routing statico tra tre sedi remote.'
+    'Rete configurata con Access List per controllare il traffico in entrata e in uscita tra subnet.',
+    'Implementazione di VLAN per segmentare logicamente la rete tra diversi reparti.',
+    'Simulazione con VLAN combinate a NAT e PAT per fornire accesso a internet a più dispositivi tramite un singolo IP pubblico.'
   ];
 
   let currentIndex = 0;
